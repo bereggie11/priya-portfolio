@@ -167,6 +167,9 @@ const Main = () => {
 
   return (
     <Box>
+      <Typography variant="h4" fontWeight={700} gutterBottom>
+        Portfolio
+      </Typography>
       {projects.map((project, index) => (
         <Accordion key={index} sx={{ mb: 2 }}>
           <AccordionSummary expandIcon={<ExpandMoreIcon />}>

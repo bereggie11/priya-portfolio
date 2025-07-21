@@ -154,7 +154,7 @@ const EducationSection = () => {
           </Box>
         </Box>
       ))}
-      <Divider />
+      {/* <Divider /> */}
     </Box>
   );
 };

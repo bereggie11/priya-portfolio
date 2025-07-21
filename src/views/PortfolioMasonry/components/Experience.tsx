@@ -104,7 +104,7 @@ const Experience = () => {
   const isMdUp = useMediaQuery(theme.breakpoints.up("md"));
 
   return (
-    <Container>
+    <>
       <Typography variant="h4" fontWeight={700} gutterBottom>
         Work Experience
       </Typography>
@@ -155,7 +155,7 @@ const Experience = () => {
           </TimelineItem>
         ))}
       </Timeline>
-    </Container>
+    </>
   );
 };
 
