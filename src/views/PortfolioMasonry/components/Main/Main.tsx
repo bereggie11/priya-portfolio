@@ -13,11 +13,58 @@ import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import CloseIcon from "@mui/icons-material/Close";
 import { useTheme } from "@mui/material/styles";
 
-// Sample project data
 const projects = [
   {
-    title: "Project 1: Brand Identity for ENS",
+    title: "Project 1: GOGO GET AI",
+    url: "https://www.gogoget.ai/",
+    description:
+      "Designed and built the brand identity and UX foundation for an AI-powered search tool. Delivered logo design, typography system, mood boards, and responsive wireframes. Translated strategy into clean, modern visuals tailored for tech-forward users.",
+    figma:
+      "https://www.figma.com/design/jKZRSXQyxZZPWOSPMFA2Sz/Gogo-Mobile?node-id=0-1&t=J8ZvBpbiP9rrdawN-1",
+    columns: [
+      [
+        {
+          image: "/portfolio/gogo/1. Project Overview@3x.png",
+          title: "GOGO Project Overview",
+          description: "AI-powered search platform identity",
+        },
+        {
+          image: "/portfolio/gogo/4. Logo Development@3x.png",
+          title: "Logo Development",
+          description: "AI symbol with modern tech essence",
+        },
+      ],
+      [
+        {
+          image: "/portfolio/gogo/2. Discover & Brand Strategy@3x.png",
+          title: "Mood Board & Strategy",
+          description: "Discovery & concept direction",
+        },
+        {
+          image: "/portfolio/gogo/5. Lo-fi wireframes@3x.png",
+          title: "Lo-fi Wireframes",
+          description: "UX structure & user flow planning",
+        },
+      ],
+      [
+        {
+          image: "/portfolio/gogo/3. Typeface@3x.png",
+          title: "Typography System",
+          description: "Modern fonts for digital readability",
+        },
+        {
+          image: "/portfolio/gogo/6. Hi-fi wireframes@3x.png",
+          title: "Hi-fi Wireframes",
+          description: "Visual design & interaction refinement",
+        },
+      ],
+    ],
+  },
+  {
+    title: "Project 2: Brand Identity for ENS",
     url: "https://www.ensecure.in/",
+    description:
+      "Created a secure and professional brand identity for a cybersecurity company. Delivered brand strategy, logo evolution, type hierarchy, social media templates, and marketing collaterals. Final output included a polished brand booklet and stakeholder-ready assets.",
     columns: [
       [
         {
@@ -72,46 +119,13 @@ const projects = [
       ],
     ],
   },
-  {
-    title: "Project 2: GOGO GET AI",
-    url: "https://gogoget.ai/",
-    columns: [
-      [
-        {
-          image: "/portfolio/sample-1.png",
-          title: "Overview",
-          description: "Concept exploration",
-        },
-        {
-          image: "/portfolio/sample-2.png",
-          title: "Style Guide",
-          description: "Visual system",
-        },
-      ],
-      [
-        {
-          image: "/portfolio/sample-3.png",
-          title: "Applications",
-          description: "Brand usage",
-        },
-      ],
-      [
-        {
-          image: "/portfolio/sample-4.png",
-          title: "Results",
-          description: "Client deliverables",
-        },
-      ],
-    ],
-  },
 ];
 
-// Column component
-const Column = ({ data, onImageClick }: any) => {
+const Column = ({ data, onImageClick }) => {
   const theme = useTheme();
   return (
     <Box>
-      {data.map((item: any, i: number) => (
+      {data.map((item, i) => (
         <Box
           key={i}
           sx={{
@@ -158,11 +172,9 @@ const Column = ({ data, onImageClick }: any) => {
   );
 };
 
-// Main component
 const Main = () => {
-  const [selectedImage, setSelectedImage] = useState<string | null>(null);
-
-  const handleImageClick = (img: string) => setSelectedImage(img);
+  const [selectedImage, setSelectedImage] = useState(null);
+  const handleImageClick = (img) => setSelectedImage(img);
   const handleCloseDrawer = () => setSelectedImage(null);
 
   return (
@@ -177,28 +189,63 @@ const Main = () => {
               <Typography variant="h6" fontWeight={700}>
                 {project.title}
               </Typography>
-              <Typography
-                variant="body2"
-                component="a"
-                href={project.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                sx={{
-                  color: "text.secondary",
-                  textDecoration: "none",
-                  "&:hover": {
-                    textDecoration: "underline",
-                    color: "primary.main",
-                  },
-                  mt: 0.5,
-                  fontSize: "0.875rem",
-                }}
-              >
-                {project.url.replace(/^https?:\/\//, "")}
+              <Typography variant="body2" sx={{ mt: 0.5 }}>
+                {project.description}
               </Typography>
+              <Box display="flex" flexDirection="column" gap={0.5} mt={1}>
+                <Box display="flex" alignItems="center" gap={1}>
+                  <Box
+                    component="img"
+                    src="/illustrations/web.png"
+                    alt="Website"
+                    sx={{ width: 16, height: 16 }}
+                  />
+                  <Typography
+                    variant="body2"
+                    component="a"
+                    href={project.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    sx={{
+                      color: "text.secondary",
+                      textDecoration: "none",
+                      "&:hover": {
+                        textDecoration: "underline",
+                        color: "primary.main",
+                        "&:hover": { textDecoration: "underline" },
+                      },
+                    }}
+                  >
+                    {project.url.replace(/^https?:\/\//, "")}
+                  </Typography>
+                </Box>
+                {project.figma && (
+                  <Box display="flex" alignItems="center" gap={1}>
+                    <Box
+                      component="img"
+                      src="/illustrations/Figma.svg"
+                      alt="Figma"
+                      sx={{ width: 16, height: 16 }}
+                    />
+                    <Typography
+                      variant="body2"
+                      component="a"
+                      href={project.figma}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      sx={{
+                        color: "primary.main",
+                        textDecoration: "none",
+                        "&:hover": { textDecoration: "underline" },
+                      }}
+                    >
+                      View Figma Prototype
+                    </Typography>
+                  </Box>
+                )}
+              </Box>
             </Box>
           </AccordionSummary>
-
           <AccordionDetails>
             <Grid container spacing={4}>
               {project.columns.map((col, idx) => (
@@ -211,7 +258,6 @@ const Main = () => {
         </Accordion>
       ))}
 
-      {/* Drawer */}
       <Drawer
         anchor="bottom"
         open={Boolean(selectedImage)}
@@ -222,8 +268,6 @@ const Main = () => {
             width: "100vw",
             p: 2,
             position: "relative",
-            borderTopLeftRadius: 0,
-            borderTopRightRadius: 0,
           },
         }}
       >

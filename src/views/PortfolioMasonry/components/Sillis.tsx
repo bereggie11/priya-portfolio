@@ -24,7 +24,7 @@ const Skills = () => (
         { icon: <DesignServicesIcon />, label: "Typography & Layout" },
         { icon: <PsychologyIcon />, label: "UX Design Principles" },
         { icon: <CodeIcon />, label: "Wireframing & Prototyping" },
-        { icon: <LanguageIcon />, label: "HTML/CSS (Basic)" },
+        
         { icon: <DesignServicesIcon />, label: "Adobe CC, Figma, Canva" },
         {
           icon: <PsychologyIcon />,
@@ -34,6 +34,7 @@ const Skills = () => (
           icon: <DesignServicesIcon />,
           label: "Design Systems & Accessibility",
         },
+        { icon: <LanguageIcon />, label: "HTML/CSS (Basic)" },
       ].map((skill, i) => (
         <Grid item key={i}>
           <Chip

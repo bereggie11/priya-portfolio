@@ -14,8 +14,8 @@ const Hero = (): JSX.Element => {
       <Box
         sx={{
           width: "100%",
-          height: { xs: 180, sm: 240, md: 300 },
-          backgroundImage: `url(/personal/cover.png)`,
+          height: { xs: 220, sm: 300, md: 400 },
+          backgroundImage: `url(/personal/cover.jpeg)`,
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}
@@ -34,7 +34,7 @@ const Hero = (): JSX.Element => {
       >
         {/* Profile Avatar */}
         <Avatar
-          src="/personal/pri.jpeg"
+          src="/personal/PRI.jpeg"
           alt="Priya Ramakrishnan"
           sx={{
             width: 150,
@@ -50,7 +50,7 @@ const Hero = (): JSX.Element => {
         {/* Text Info */}
         <Box sx={{ pt: 8, pl: { xs: 2, sm: 2 }, pr: 2 }}>
           <Typography variant="h6" fontWeight={700}>
-            Gomathi PRIYA Ramakrishnan
+            PRIYA R
           </Typography>
 
           <Typography
@@ -59,7 +59,7 @@ const Hero = (): JSX.Element => {
             fontWeight={500}
             sx={{ mt: 0.5 }}
           >
-            Graphic Designer | Brand Designer | UI/UX Designer | Photographer
+            Graphic Designer | UI/UX Designer | Brand Designer | Photographer
           </Typography>
 
           {/* Location */}

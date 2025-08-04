@@ -144,7 +144,7 @@ const Experience = () => {
               <Typography variant="body2" color="text.secondary" gutterBottom>
                 {exp.location}
               </Typography>
-              <Box component="ul" pl={2} mt={0} mb={2}>
+              <Box component="ul" pl={0} mt={0} mb={2}>
                 {exp.points.map((pt, i) => (
                   <Typography key={i} variant="body2">
                     {pt}

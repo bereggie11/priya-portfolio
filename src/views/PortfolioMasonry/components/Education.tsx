@@ -64,7 +64,7 @@ const educationData: EducationItem[] = [
     degree: "Post-Graduation, Fashion/Apparel Design",
     dates: "May 2012 – May 2014",
     highlights: [
-      "Outgoing Student Award",
+      "Best Outgoing Student Award",
       "Best Academic Performance Award",
       "Grade: Distinction",
     ],
@@ -83,7 +83,7 @@ const educationData: EducationItem[] = [
     degree: "Design",
     dates: "2006 – 2022",
     highlights: [
-      "Adobe Photoshop | Adobe Illustrator | Articulate 360 | Camtasia | Snagit | CLO3D | Blender",
+      "FIGMA | Adobe Photoshop | Adobe Illustrator | Articulate 360 | Camtasia | Snagit | CLO3D",
     ],
     skills: ["Articulate Storyline", "Adobe Lightroom"],
   },
