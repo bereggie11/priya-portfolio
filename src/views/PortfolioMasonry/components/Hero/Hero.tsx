@@ -34,7 +34,7 @@ const Hero = (): JSX.Element => {
       >
         {/* Profile Avatar */}
         <Avatar
-          src="/personal/PRI.jpeg"
+          src="/personal/pri-2025.jpeg"
           alt="Priya Ramakrishnan"
           sx={{
             width: 150,
