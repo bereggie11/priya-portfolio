@@ -15,7 +15,7 @@ const Hero = (): JSX.Element => {
         sx={{
           width: "100%",
           height: { xs: 220, sm: 300, md: 400 },
-          backgroundImage: `url(/personal/cover.jpeg)`,
+          backgroundImage: `url(/personal/cover.png)`,
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}
